@@ -160,11 +160,11 @@
   const resetPose = () => { targetX = 0; targetY = 0; schedule(); };
 
   function animate() {
-    x += (targetX - x) * 0.13;
-    y += (targetY - y) * 0.13;
-    portrait.style.setProperty('--portrait-x', `${(-y * 7).toFixed(3)}deg`);
-    portrait.style.setProperty('--portrait-y', `${(x * 9).toFixed(3)}deg`);
-    portrait.style.setProperty('--portrait-z', `${(Math.max(Math.abs(x), Math.abs(y)) * 16).toFixed(2)}px`);
+    x += (targetX - x) * 0.19;
+    y += (targetY - y) * 0.19;
+    portrait.style.setProperty('--portrait-x', `${(-y * 16).toFixed(3)}deg`);
+    portrait.style.setProperty('--portrait-y', `${(x * 18).toFixed(3)}deg`);
+    portrait.style.setProperty('--portrait-z', `${(Math.max(Math.abs(x), Math.abs(y)) * 24).toFixed(2)}px`);
     if (Math.abs(x - targetX) + Math.abs(y - targetY) > 0.001) {
       frameId = requestAnimationFrame(animate);
     } else { frameId = 0; }
@@ -189,8 +189,8 @@
     const sign = angle === -90 || angle === 270 ? -1 : 1;
     const side = landscape ? sign * deltaBeta : deltaGamma;
     const forward = landscape ? -sign * deltaGamma : deltaBeta;
-    targetX = clamp(side / 24);
-    targetY = clamp(forward / 26);
+    targetX = clamp(side / 13);
+    targetY = clamp(forward / 14);
     schedule();
   }
   function stop(message = '') {
