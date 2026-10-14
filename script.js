@@ -105,3 +105,32 @@
     else if (!document.hidden) start();
   });
 })();
+
+
+/* Lightweight mouse-following perspective on the existing transparent portrait. */
+(() => {
+  const section = document.querySelector('.profile-section');
+  const img = section?.querySelector('.profile-art');
+  const enabled = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+  if (!section || !img || !enabled.matches) return;
+  let x=0, y=0, targetX=0, targetY=0, raf=0;
+  function animate() {
+    x += (targetX-x)*0.13;
+    y += (targetY-y)*0.13;
+    img.style.setProperty('--portrait-x', `${(-y*7).toFixed(3)}deg`);
+    img.style.setProperty('--portrait-y', `${(x*9).toFixed(3)}deg`);
+    img.style.setProperty('--portrait-z', `${(Math.max(Math.abs(x),Math.abs(y))*16).toFixed(2)}px`);
+    img.style.setProperty('--portrait-shadow-x', `${(-x*13).toFixed(2)}px`);
+    if (Math.abs(x-targetX)+Math.abs(y-targetY) > .001) raf=requestAnimationFrame(animate);
+    else raf=0;
+  }
+  function request() { if (!raf) raf=requestAnimationFrame(animate); }
+  section.addEventListener('pointermove', event => {
+    const box=section.getBoundingClientRect();
+    targetX=Math.max(-1,Math.min(1,((event.clientX-box.left)/box.width)*2-1));
+    targetY=Math.max(-1,Math.min(1,((event.clientY-box.top)/box.height)*2-1));
+    request();
+  }, {passive:true});
+  section.addEventListener('pointerleave', () => { targetX=0; targetY=0; request(); });
+  window.addEventListener('blur', () => { targetX=0; targetY=0; request(); });
+})();

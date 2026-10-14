@@ -106,3 +106,18 @@ h1 .name-first, h1 .name-last { display: inline; }
 @media (prefers-reduced-motion:reduce) {
   *, *::before, *::after { animation-duration:.001ms !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
 }
+
+
+/* Portrait depth: the image file and its transparency stay unchanged. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .profile-section { perspective: 1050px; perspective-origin: center 48%; }
+  .profile-art {
+    transform: rotateX(var(--portrait-x, 0deg)) rotateY(var(--portrait-y, 0deg)) translateZ(var(--portrait-z, 0px));
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    will-change: transform;
+  }
+  .profile-section:hover .profile-art {
+    filter: drop-shadow(var(--portrait-shadow-x, 0px) 20px 25px rgba(0, 3, 20, .38));
+  }
+}
