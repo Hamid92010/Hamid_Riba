@@ -134,3 +134,111 @@
   section.addEventListener('pointerleave', () => { targetX=0; targetY=0; request(); });
   window.addEventListener('blur', () => { targetX=0; targetY=0; request(); });
 })();
+
+
+/* Optional phone-tilt effect, enabled only by a deliberate tap.
+   iOS Safari requires DeviceOrientationEvent.requestPermission() in a click handler.
+   No sensor readings are stored or transmitted. */
+(() => {
+  const portrait = document.querySelector('.profile-art');
+  const controls = document.getElementById('motion-controls');
+  const toggle = document.getElementById('motion-toggle');
+  const status = document.getElementById('motion-status');
+  const mobile = window.matchMedia('(hover: none) and (pointer: coarse)');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!portrait || !controls || !toggle || !status
+      || !mobile.matches || reduced.matches || !window.isSecureContext
+      || !('DeviceOrientationEvent' in window)) return;
+
+  controls.hidden = false;
+  let enabled = false;
+  let calibration = null;
+  let x = 0, y = 0, targetX = 0, targetY = 0, frameId = 0;
+  let timeoutId = 0;
+
+  const clamp = v => Math.max(-1, Math.min(1, v));
+  const resetPose = () => { targetX = 0; targetY = 0; schedule(); };
+
+  function animate() {
+    x += (targetX - x) * 0.13;
+    y += (targetY - y) * 0.13;
+    portrait.style.setProperty('--portrait-x', `${(-y * 7).toFixed(3)}deg`);
+    portrait.style.setProperty('--portrait-y', `${(x * 9).toFixed(3)}deg`);
+    portrait.style.setProperty('--portrait-z', `${(Math.max(Math.abs(x), Math.abs(y)) * 16).toFixed(2)}px`);
+    if (Math.abs(x - targetX) + Math.abs(y - targetY) > 0.001) {
+      frameId = requestAnimationFrame(animate);
+    } else { frameId = 0; }
+  }
+  function schedule() {
+    if (!frameId) frameId = requestAnimationFrame(animate);
+  }
+  function onOrientation(event) {
+    if (!enabled || typeof event.beta !== 'number' || typeof event.gamma !== 'number') return;
+    clearTimeout(timeoutId);
+    if (!calibration) {
+      calibration = { beta: event.beta, gamma: event.gamma };
+      status.textContent = 'Tilt your phone to move the portrait.';
+    }
+    // Calibrate from the angle at which the visitor taps "Enable 3D tilt".
+    const deltaBeta = event.beta - calibration.beta;
+    const deltaGamma = event.gamma - calibration.gamma;
+    const angle = (screen.orientation && typeof screen.orientation.angle === 'number')
+      ? screen.orientation.angle
+      : (typeof window.orientation === 'number' ? window.orientation : 0);
+    const landscape = Math.abs(angle) === 90 || angle === 270;
+    const sign = angle === -90 || angle === 270 ? -1 : 1;
+    const side = landscape ? sign * deltaBeta : deltaGamma;
+    const forward = landscape ? -sign * deltaGamma : deltaBeta;
+    targetX = clamp(side / 24);
+    targetY = clamp(forward / 26);
+    schedule();
+  }
+  function stop(message = '') {
+    enabled = false;
+    calibration = null;
+    clearTimeout(timeoutId);
+    window.removeEventListener('deviceorientation', onOrientation);
+    toggle.textContent = 'Enable 3D tilt';
+    toggle.setAttribute('aria-pressed', 'false');
+    status.textContent = message;
+    resetPose();
+  }
+  function start() {
+    enabled = true;
+    calibration = null;
+    toggle.textContent = 'Disable 3D tilt';
+    toggle.setAttribute('aria-pressed', 'true');
+    status.textContent = 'Ready. Waiting for motion sensors…';
+    window.addEventListener('deviceorientation', onOrientation, { passive: true });
+    timeoutId = setTimeout(() => {
+      if (!calibration) stop('Motion data unavailable in this browser.');
+    }, 4000);
+  }
+
+  toggle.addEventListener('click', async () => {
+    if (enabled) { stop(); return; }
+    try {
+      if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        // Call permission method immediately within the user tap.
+        const permission = await DeviceOrientationEvent.requestPermission();
+        if (permission !== 'granted') {
+          stop('Motion permission was not granted.');
+          return;
+        }
+      }
+      start();
+    } catch (error) {
+      stop('Could not activate motion sensors. Try Safari over HTTPS.');
+    }
+  });
+  window.addEventListener('orientationchange', () => {
+    calibration = null; resetPose();
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden && enabled) stop();
+  });
+  if (reduced.addEventListener) reduced.addEventListener('change', () => {
+    if (reduced.matches) { stop(); controls.hidden = true; }
+    else { controls.hidden = false; }
+  });
+})();

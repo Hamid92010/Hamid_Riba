@@ -121,3 +121,31 @@ h1 .name-first, h1 .name-last { display: inline; }
     filter: drop-shadow(var(--portrait-shadow-x, 0px) 20px 25px rgba(0, 3, 20, .38));
   }
 }
+
+/* 3D motion control appears only on touch devices with available sensors. */
+.motion-controls { display: none; flex-direction: column; align-items: center; gap: 5px; margin-top: 12px; }
+.motion-controls[hidden] { display: none !important; }
+.motion-toggle {
+  border: 1px solid rgba(66,225,255,.78);
+  color: #fff;
+  border-radius: 999px;
+  padding: 9px 16px;
+  background: rgba(3,12,44,.78);
+  box-shadow: 0 0 10px rgba(0,220,255,.18);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.motion-toggle[aria-pressed="true"] { border-color: var(--pink); box-shadow: 0 0 12px rgba(250,74,198,.28); }
+.motion-status { font-size: 11px; line-height: 1.3; margin: 1px 0 0; color: #dceafa; text-shadow: 0 1px 5px #05102b; max-width: 265px; }
+@media (hover: none) and (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+  .motion-controls:not([hidden]) { display: flex; }
+  .profile-section { perspective: 1050px; perspective-origin: center 48%; }
+  .profile-art {
+    transform: rotateX(var(--portrait-x,0deg)) rotateY(var(--portrait-y,0deg)) translateZ(var(--portrait-z,0px));
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    will-change: transform;
+  }
+}

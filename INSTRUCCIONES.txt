@@ -1,0 +1,10 @@
+EFECTO 3D CON INCLINACION DEL TELEFONO
+
+Sube index.html, styles.css y script.js a la raiz de GitHub:
+https://github.com/Hamid92010/Hamid_Riba
+
+Sustituye las versiones anteriores. Conserva la carpeta assets.
+Abre el sitio publicado con HTTPS en Safari/Chrome de un telefono.
+Toca 'Enable 3D tilt' debajo de tu foto; en iPhone, permite acceso.
+La posicion del telefono se calibra al pulsar el boton.
+La animacion con mouse en PC permanece igual.
