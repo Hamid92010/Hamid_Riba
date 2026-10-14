@@ -1,4 +1,4 @@
-# Hamid Riba — Portfolio v2
+# Hamid Riba — Portfolio
 
 New professional portfolio for **Game Developer** and **XR Developer**, built with plain HTML, CSS and JavaScript for **GitHub Pages**.
 
