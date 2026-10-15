@@ -20,7 +20,13 @@ body.xr-page #game-glitch {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 5;
+    z-index: 0;
+}
+
+body.game-page > .inner-container,
+body.xr-page > .inner-container {
+    position: relative;
+    z-index: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -29,3 +35,4 @@ body.xr-page #game-glitch {
         display: none;
     }
 }
+
