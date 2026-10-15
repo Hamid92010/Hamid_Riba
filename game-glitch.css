@@ -3,3 +3,14 @@ body.game-page {background:radial-gradient(ellipse at 60% 25%,#0a1734 0%,#030815
 body.game-page .inner-page::before,body.game-page::before {background:none !important;}
 body.game-page #game-glitch {position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5;}
 @media (prefers-reduced-motion:reduce){body.game-page #game-glitch{display:none}}
+body.game-page {
+    background: radial-gradient(
+        ellipse at 55% 35%,
+        #0a1730 0%,
+        #040917 48%,
+        #010204 100%
+    );
+}
+body.game-page.inner-page::before {
+    content: none;
+}
