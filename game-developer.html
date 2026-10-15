@@ -1,29 +1,53 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#06112d">
-  <title>Game Developer | Hamid Riba</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="game-glitch.css">
-  <script defer src="game-glitch.js"></script>
-</head>
-<body class="inner-page game-page">
-  <canvas id="game-glitch" aria-hidden="true"></canvas>
-  <main class="inner-container">
-    <nav class="inner-nav" aria-label="Navigation"><a class="back-link" href="index.html">← Back to home</a><span class="mini-brand">HAMID RIBA</span></nav>
-    <header class="section-hero">
-      <span class="eyebrow">Game programming & interactive systems</span>
-      <h1>Game <span class="name-first">Developer</span></h1>
-      <p>A selection of game projects featuring gameplay mechanics, interactive systems and Unity development. We'll build out this section with full project details, media and technical breakdowns.</p>
-    </header>
-    <section class="project-grid" aria-label="Featured game projects">
-      <article class="project-card"><h2>Dunk &amp; Dash</h2><p>A circus-themed vertical platformer starring Bravard. Currently available as a playable demo.</p><a target="_blank" rel="noopener noreferrer" href="https://andres-mera.itch.io/dunk-dash">View playable demo ↗</a></article>
-      <article class="project-card"><h2>Inflation Paradox</h2><p>One of my gameplay projects. A dedicated technical overview, screenshots and gameplay clips are coming soon.</p></article>
-      <article class="project-card"><h2>Deepception</h2><p>Independent game project. Play it on itch.io while its full portfolio breakdown is being prepared.</p><a target="_blank" rel="noopener noreferrer" href="https://ferxha.itch.io/deepception">View game ↗</a></article>
-    </section>
-    <p class="inner-note">This is the initial page structure. Additional projects and gameplay galleries can be added next.</p>
-  </main>
-</body>
-</html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#040917"><meta name="description" content="Hamid Riba – game development portfolio, skills and process.">
+<title>Game Developer | Hamid Riba</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="game-glitch.css">
+<link rel="stylesheet" href="game-sections.css">
+<script defer src="game-glitch.js"></script>
+<script defer src="game-sections.js"></script>
+</head><body class="inner-page game-page">
+<canvas id="game-glitch" aria-hidden="true"></canvas>
+<main class="inner-container game-inner">
+<nav class="game-topnav" aria-label="Page navigation">
+<a class="game-back" href="index.html">← Back to Home</a>
+<div class="game-topnav-links"><a href="#intro">Home</a><a href="#description">About</a><a href="#process">Process</a><a href="#games">Games</a></div>
+</nav>
+<section class="game-panel game-intro" id="intro" aria-labelledby="intro-heading">
+<div class="reveal"><p class="section-overline">01 / INTRODUCTION</p><h1 id="intro-heading">Game <span class="name-first">Developer</span></h1>
+<p>Gameplay programming, creative problem-solving, and interactive systems.</p>
+<div class="cv-placeholder" aria-label="Resume coming soon"><span class="cv-icon" aria-hidden="true">▤</span><div><strong>My Resume</strong><small>CV download will be added when the portfolio is complete.</small></div><span class="cv-coming">Coming soon</span></div>
+</div><a class="continue-link" href="#description">Explore my skills <span aria-hidden="true">↓</span></a>
+</section>
+<section class="game-panel game-description" id="description" aria-labelledby="skills-heading">
+<div class="section-heading reveal"><p class="section-overline">02 / DESCRIPTION</p><h2 id="skills-heading">Skills &amp; <span>About Me</span></h2><p>Technologies, tools, and a bit about my journey as a Game Developer.</p></div>
+<div class="skills-grid">
+<article class="skills-card accent-cyan reveal"><header><span class="skills-card-symbol" aria-hidden="true">&lt;/&gt;</span><div><h3>Languages</h3><p>Programming languages I use to build experiences.</p></div></header><div class="skills-chips"><div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" onerror="this.style.display='none'"/><span>C#</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" onerror="this.style.display='none'"/><span>C++</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg" onerror="this.style.display='none'"/><span>Lua</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" onerror="this.style.display='none'"/><span>HTML</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" onerror="this.style.display='none'"/><span>CSS</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" onerror="this.style.display='none'"/><span>JavaScript</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" onerror="this.style.display='none'"/><span>Python</span></div></div></article>
+<article class="skills-card accent-blue reveal"><header><span class="skills-card-symbol" aria-hidden="true">⚙</span><div><h3>Softwares</h3><p>Tools for development, art, and collaboration.</p></div></header><div class="skills-chips"><div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" onerror="this.style.display='none'"/><span>Unity</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg" onerror="this.style.display='none'"/><span>Unreal</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="assets/skill-icons/roblox.svg" onerror="this.style.display='none'"/><span>Roblox</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="assets/skill-icons/spatial.svg" onerror="this.style.display='none'"/><span>Spatial</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maya/maya-original.svg" onerror="this.style.display='none'"/><span>Maya</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" onerror="this.style.display='none'"/><span>Blender</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" onerror="this.style.display='none'"/><span>GitHub</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" onerror="this.style.display='none'"/><span>Figma</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" onerror="this.style.display='none'"/><span>Jira</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="assets/skill-icons/miro.svg" onerror="this.style.display='none'"/><span>Miro</span></div></div></article>
+<article class="skills-card accent-purple reveal"><header><span class="skills-card-symbol" aria-hidden="true">⬡</span><div><h3>Frameworks &amp; Technologies</h3><p>Technologies for interactive and immersive projects.</p></div></header><div class="skills-chips"><div class="skill-chip"><img loading="lazy" alt="" src="assets/skill-icons/tilt-brush.svg" onerror="this.style.display='none'"/><span>Tilt Brush</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="assets/skill-icons/ready-player-me.svg" onerror="this.style.display='none'"/><span>Ready Player Me</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webgl/webgl-original.svg" onerror="this.style.display='none'"/><span>WebGL</span></div>
+<div class="skill-chip"><img loading="lazy" alt="" src="assets/skill-icons/pygame.svg" onerror="this.style.display='none'"/><span>Pygame</span></div></div></article>
+<article class="skills-card accent-orange reveal"><header><span class="skills-card-symbol" aria-hidden="true">✦</span><div><h3>About Me</h3></div></header><p class="about-copy">I'm a Mechatronics Engineer and Game Developer focused on gameplay programming, interactive systems, and immersive experiences. I enjoy turning ideas into playable prototypes and refining them through testing, collaboration, and iteration.</p></article>
+</div>
+</section>
+<section class="game-panel future-panel" id="process" aria-labelledby="process-heading"><div class="reveal"><p class="section-overline">03 / PROCESS</p><h2 id="process-heading">From Concept to a Tested Build</h2><p>Idea &amp; Design · Prototyping · Programming · Integration · Testing &amp; Optimization</p><p class="pending-design">Design to be defined in the next phase.</p></div></section>
+<section class="game-panel future-panel" id="games" aria-labelledby="games-heading"><div class="reveal"><p class="section-overline">04 / GAMES</p><h2 id="games-heading">Games &amp; Projects</h2><p><strong>Game Jams</strong> · Deepception · Cookie Panic · Wobble Heads · Mixer Doctor · Pitz</p><p><strong>Projects</strong> · Dunk &amp; Dash</p><p><strong>Prototypes</strong> · Unity exercises</p><p class="pending-design">Project galleries will be designed separately.</p></div></section>
+</main></body></html>

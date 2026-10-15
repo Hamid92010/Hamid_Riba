@@ -1,0 +1,47 @@
+/* Game Developer only: existing shared glitch and homepage styles are preserved. */
+.game-page .game-inner{max-width:1480px;padding:0 clamp(16px,4vw,56px) 70px;}
+.game-page .game-topnav{position:sticky;top:0;z-index:12;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 8px;background:rgba(3,7,21,.89);border-bottom:1px solid #2b4268;backdrop-filter:blur(12px);flex-wrap:wrap;}
+.game-page .game-topnav a{color:#e9f6ff;font-weight:650;font-size:14px;text-decoration:none;}
+.game-page .game-topnav a:hover{color:#4be0fa;}
+.game-page .game-topnav-links{display:flex;gap:clamp(10px,2.5vw,30px);align-items:center;}
+.game-page .game-panel{position:relative;min-height:92svh;padding:clamp(75px,10vh,118px) clamp(5px,1vw,22px);scroll-margin-top:76px;}
+.game-page .game-panel + .game-panel{border-top:1px solid rgba(96,176,220,.2);}
+.game-page .section-overline{letter-spacing:.22em;text-transform:uppercase;color:#48e0fa;font-size:12px;font-weight:750;margin:0 0 18px;}
+.game-page .game-panel h1,.game-page .game-panel h2{line-height:1.1;letter-spacing:-.025em;margin:0 0 14px;color:#fafbff;font-weight:800;}
+.game-page .game-panel h1{font-size:clamp(44px,7vw,96px);}
+.game-page .game-panel h2{font-size:clamp(35px,4.2vw,66px);}
+.game-page .game-panel > div > p,.game-page .future-panel p{line-height:1.65;color:#d6e2f8;}
+.game-page .game-intro{display:flex;justify-content:center;flex-direction:column;}
+.game-page .game-intro > div{max-width:800px;}
+.game-page .cv-placeholder{margin-top:32px;display:flex;align-items:center;gap:16px;background:rgba(11,19,43,.86);border:1px solid #466287;border-radius:16px;padding:20px;max-width:540px;}
+.game-page .cv-placeholder strong,.game-page .cv-placeholder small{display:block;}
+.game-page .cv-placeholder small{margin-top:5px;color:#adbed7;line-height:1.4;}
+.game-page .cv-icon{font-size:30px;color:#58dfff;}
+.game-page .cv-coming{font-size:12px;margin-left:auto;white-space:nowrap;border:1px solid #4f627f;border-radius:15px;padding:5px 10px;color:#cad7e8;}
+.game-page .continue-link{position:absolute;bottom:36px;left:22px;color:#4fe4f5;text-decoration:none;font-weight:650;}
+.game-page .section-heading{margin-bottom:32px;}
+.game-page .section-heading h2 span{background:linear-gradient(90deg,#28eaf7,#9c80f8,#ee5ddd);color:transparent;background-clip:text;-webkit-background-clip:text;}
+.game-page .section-heading > p:last-child{color:#c0d1e6;font-size:17px;}
+.game-page .skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.game-page .skills-card{position:relative;padding:clamp(18px,2.1vw,28px);border-radius:18px;background:rgba(12,18,40,.94);border:1px solid rgba(88,185,245,.46);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 12px 36px rgba(0,0,0,.2);min-width:0;}
+.game-page .skills-card.accent-purple{border-color:rgba(203,116,255,.5);}
+.game-page .skills-card.accent-orange{border-color:rgba(255,175,112,.52);}
+.game-page .skills-card header{display:flex;gap:14px;align-items:flex-start;margin-bottom:24px;}
+.game-page .skills-card-symbol{display:inline-flex;align-items:center;justify-content:center;flex:0 0 36px;color:#50dcf4;font-size:29px;font-weight:800;line-height:1;}
+.game-page .accent-purple .skills-card-symbol{color:#da79ff;}.game-page .accent-orange .skills-card-symbol{color:#ffb968;}
+.game-page .skills-card h3{margin:0 0 4px;color:#fff;font-size:clamp(20px,1.7vw,26px);}
+.game-page .skills-card header p{margin:0;color:#b8cce2;font-size:14px;line-height:1.4;}
+.game-page .skills-chips{display:flex;flex-wrap:wrap;gap:10px;}
+.game-page .skill-chip{display:inline-flex;align-items:center;gap:10px;padding:9px 13px;border-radius:999px;border:1px solid rgba(159,185,225,.38);background:#141b30;color:#f8fbff;white-space:nowrap;font-size:13px;font-weight:650;min-height:46px;}
+.game-page .skill-chip img{width:27px;height:27px;object-fit:contain;flex:0 0 27px;}
+.game-page .about-copy{font-size:clamp(15px,1.15vw,18px);line-height:1.72;color:#dfebf9;margin:0;max-width:58ch;}
+.game-page .future-panel{min-height:80svh;display:flex;align-items:center;}
+.game-page .future-panel h2{font-size:clamp(30px,4.3vw,62px);}
+.game-page .pending-design{opacity:.64;font-style:italic;font-size:14px;}
+/* Reveal on scroll, with fallback visible if JS does not load. */
+.game-page.has-reveal .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1);}
+.game-page.has-reveal .reveal.is-visible{opacity:1;transform:none;}
+.game-page .skills-card:nth-child(2){transition-delay:.08s;}.game-page .skills-card:nth-child(3){transition-delay:.12s;}.game-page .skills-card:nth-child(4){transition-delay:.17s;}
+@media(max-width:900px){.game-page .skills-grid{grid-template-columns:1fr;}.game-page .game-panel{min-height:unset;padding-block:70px 95px;}.game-page .game-intro{min-height:90svh;}.game-page .skills-card{padding:20px;}}
+@media(max-width:520px){.game-page .game-topnav{justify-content:center;padding:12px 4px;}.game-page .game-topnav-links{width:100%;justify-content:space-around;}.game-page .game-topnav a{font-size:12px;}.game-page .cv-placeholder{align-items:flex-start;}.game-page .cv-coming{margin-left:0;}.game-page .skill-chip{font-size:12px;padding:8px 10px;min-height:42px;}.game-page .skill-chip img{width:24px;height:24px;flex-basis:24px;}}
+@media(prefers-reduced-motion:reduce){.game-page.has-reveal .reveal{opacity:1;transform:none;transition:none;}}
