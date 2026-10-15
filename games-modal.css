@@ -1,0 +1,47 @@
+/* Cookie Panic modal prototype. Applies to Game Developer only. */
+.game-page .games-panel{display:block;min-height:unset;}
+.game-page .games-category{margin:26px 0 42px;}
+.game-page .games-category-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid #34415f;margin-bottom:18px;padding-bottom:12px;}
+.game-page .games-category-heading h3{margin:0;color:white;font-size:clamp(22px,2.3vw,34px);}
+.game-page .games-category-heading span{color:#b1c5df;font-size:13px;}
+.game-page .games-card-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;}
+.game-page .games-card{appearance:none;font:inherit;text-align:left;min-width:0;overflow:hidden;border:1px solid #344564;border-radius:15px;background:#10182d;color:white;padding:0;display:flex;flex-direction:column;box-shadow:0 10px 28px #0003;}
+.game-page button.games-card{cursor:pointer;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+.game-page button.games-card:hover,.game-page button.games-card:focus-visible{transform:translateY(-4px);border-color:#e36ad3;box-shadow:0 0 22px #dc55d448;}
+.game-page .games-card>img,.game-page .games-card-placeholder{height:145px;width:100%;object-fit:cover;display:grid;place-items:center;background:linear-gradient(130deg,#17213b,#071022);}
+.game-page .games-card-placeholder{font-size:12px;color:#7e93b7;letter-spacing:.12em;text-align:center;padding:12px;}
+.game-page .games-card>h4,.game-page .games-card-copy{display:block;margin:12px 12px 0;font-size:17px;}
+.game-page .games-card>small,.game-page .games-card-copy small{display:block;color:#abc1db;font-size:12px;margin:7px 12px 14px;}
+.game-page .games-card-copy strong{display:block;}
+.game-page .games-card-copy small{margin:7px 0 14px;}
+.game-page .games-soon-card{padding:23px;border-radius:15px;border:1px solid #384869;background:#111a31;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;}
+.game-page .games-soon-card span{color:#b7c8df;}
+.cookie-modal{color:#f8faff;box-sizing:border-box;position:fixed;width:min(1180px,calc(100% - 32px));max-width:1180px;max-height:calc(100dvh - 30px);padding:0;border:1px solid #36cfea;border-radius:21px;background:#0c1328;box-shadow:0 0 0 1px #dd64e355,0 30px 90px #000b;overflow:auto;overscroll-behavior:contain;}
+.cookie-modal::backdrop{background:rgba(1,4,14,.84);backdrop-filter:blur(8px);}
+.cookie-modal *{box-sizing:border-box;}
+.cookie-modal-body{padding:clamp(18px,2vw,32px);position:relative;}
+.cookie-close{position:sticky;float:right;top:0;z-index:5;margin:-9px -9px 4px 8px;height:40px;width:40px;border:1px solid #dc84ea;border-radius:50%;color:#fff;background:#252044;font-size:27px;cursor:pointer;}
+.cookie-modal-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(18px,3vw,36px);clear:both;}
+.cookie-media-column,.cookie-detail-column{min-width:0;}
+.cookie-media-stage{width:100%;aspect-ratio:16/9;position:relative;border-radius:13px;background:#030812;overflow:hidden;border:1px solid #324863;}
+.cookie-media-stage img,.cookie-media-stage video{width:100%;height:100%;object-fit:contain;position:absolute;inset:0;display:block;}
+.cookie-media-stage [hidden]{display:none!important;}
+.cookie-media-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px;}
+.cookie-media-option{min-width:0;border:1px solid #4a5b78;border-radius:10px;background:#151e35;color:#e6edff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:74px;font-weight:650;font-size:12px;cursor:pointer;}
+.cookie-media-option img{width:54px;height:34px;object-fit:cover;border-radius:4px;}
+.cookie-media-option.is-selected{border-color:#f074da;box-shadow:0 0 0 1px #f074da80;}
+.cookie-thumb-play{font-size:23px;color:#55eaff;}
+.cookie-type{display:inline-block;font-size:12px;letter-spacing:.07em;border:1px solid #23bcda;color:#8feeff;padding:7px 11px;border-radius:999px;}
+.cookie-detail-column h2{font-size:clamp(35px,4vw,56px);margin:13px 0 22px;line-height:1.1;letter-spacing:-.035em;}
+.cookie-detail-column h2 span{background:linear-gradient(90deg,#38ddf7,#e96add);color:transparent;background-clip:text;-webkit-background-clip:text;}
+.cookie-detail-group{margin-bottom:24px;}
+.cookie-detail-group h3{margin:0 0 9px;font-size:17px;color:#7de9f9;}
+.cookie-detail-group p,.cookie-detail-group li{font-size:14px;line-height:1.65;color:#d7e5fa;}
+.cookie-detail-group p{margin:0;}
+.cookie-detail-group ul{padding-left:20px;margin:0;}
+.cookie-detail-group li+li{margin-top:7px;}
+.cookie-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.cookie-tags span{font-size:12px;border-radius:999px;border:1px solid #485a78;padding:7px 10px;background:#161e36;}
+@media(max-width:900px){.game-page .games-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.cookie-modal-grid{grid-template-columns:1fr;}}
+@media(max-width:540px){.game-page .games-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.game-page .games-card>img,.game-page .games-card-placeholder{height:112px;}.cookie-modal{width:calc(100% - 14px);max-height:calc(100dvh - 14px);border-radius:15px;}.cookie-modal-body{padding:15px;}.cookie-detail-column h2{font-size:36px;}.cookie-media-picker{gap:7px;}}
+@media(prefers-reduced-motion:reduce){.game-page button.games-card{transition:none;}}

@@ -10,6 +10,8 @@
 <script defer src="game-glitch.js"></script>
 <script defer src="game-sections.js"></script>
 <script defer src="process-showcase.js"></script>
+<link rel="stylesheet" href="games-modal.css">
+<script defer src="games-modal.js"></script>
 </head><body class="inner-page game-page">
 <canvas id="game-glitch" aria-hidden="true"></canvas>
 <main class="inner-container game-inner">
@@ -54,7 +56,7 @@
   <div class="process-heading reveal">
     <div>
       <p class="section-overline">03 / PROCESS</p>
-      <h2 id="process-heading">FROM CONCEPT TO A<br>TESTED BUILD<span class="process-heading-dot">.</span></h2>
+      <h2 id="process-heading">From Concept to a<br>Tested Build<span class="process-heading-dot">.</span></h2>
     </div>
     <p>Explore each stage to see the work behind the experience.<br><span class="process-mobile-hint">Tap a stage to switch the preview.</span></p>
   </div>
@@ -83,5 +85,44 @@
     </div>
   </div>
 </section>
-<section class="game-panel future-panel" id="games" aria-labelledby="games-heading"><div class="reveal"><p class="section-overline">04 / GAMES</p><h2 id="games-heading">Games &amp; Projects</h2><p><strong>Game Jams</strong> · Deepception · Cookie Panic · Wobble Heads · Mixer Doctor · Pitz</p><p><strong>Projects</strong> · Dunk &amp; Dash</p><p><strong>Prototypes</strong> · Unity exercises</p><p class="pending-design">Project galleries will be designed separately.</p></div></section>
-</main></body></html>
+<section class="game-panel games-panel" id="games" aria-labelledby="games-heading">
+ <div class="section-heading reveal"><p class="section-overline">04 / PORTFOLIO</p><h2 id="games-heading">Games &amp; <span>Projects</span></h2><p>Game jams, featured projects, and playable experiments.</p></div>
+ <div class="games-category reveal"><div class="games-category-heading"><h3>Game Jams</h3><span>5 games</span></div>
+ <div class="games-card-grid">
+ <article class="games-card games-card--placeholder"><div class="games-card-placeholder" aria-hidden="true">DEEPCEPTION</div><h4>Deepception</h4><small>Game Jam · Details coming soon</small></article>
+ <button type="button" class="games-card games-card--active" data-open-cookie aria-haspopup="dialog" aria-controls="cookie-modal"><img src="assets/games/cookie-panic-cover.png" alt="Cookie Panic official cover with the collector and oven on a floating cookie" loading="lazy"><span class="games-card-copy"><strong>Cookie Panic</strong><small>Game Jam · View project ↗</small></span></button>
+ <article class="games-card games-card--placeholder"><div class="games-card-placeholder" aria-hidden="true">WOBBLE HEADS</div><h4>Wobble Heads</h4><small>Game Jam · Details coming soon</small></article>
+ <article class="games-card games-card--placeholder"><div class="games-card-placeholder" aria-hidden="true">MIXER DOCTOR</div><h4>Mixer Doctor</h4><small>Game Jam · Details coming soon</small></article>
+ <article class="games-card games-card--placeholder"><div class="games-card-placeholder" aria-hidden="true">PITZ</div><h4>Pitz</h4><small>Game Jam · Details coming soon</small></article>
+ </div></div>
+ <div class="games-category reveal"><div class="games-category-heading"><h3>Projects</h3><span>Featured project</span></div><div class="games-soon-card"><strong>Dunk &amp; Dash</strong><span>Playable demo · Project card coming next</span></div></div>
+ <div class="games-category reveal"><div class="games-category-heading"><h3>Prototypes</h3><span>Unity exercises</span></div><div class="games-soon-card"><strong>Unity Exercises &amp; Prototypes</strong><span>Gameplay systems and experiments · Coming next</span></div></div>
+</section>
+</main>
+<dialog id="cookie-modal" class="cookie-modal" aria-labelledby="cookie-modal-title">
+  <div class="cookie-modal-body">
+    <button type="button" class="cookie-close" data-cookie-close aria-label="Close Cookie Panic details">×</button>
+    <div class="cookie-modal-grid">
+      <div class="cookie-media-column">
+        <div class="cookie-media-stage"><img id="cookie-cover" src="assets/games/cookie-panic-cover.png" alt="Cookie Panic official game cover"><video id="cookie-player" controls playsinline preload="none" hidden></video></div>
+        <div class="cookie-media-picker" aria-label="Cookie Panic media">
+          <button type="button" class="cookie-media-option is-selected" data-cookie-media="cover" aria-pressed="true"><img src="assets/games/cookie-panic-cover.png" alt="">Cover</button>
+          <button type="button" class="cookie-media-option" data-cookie-media="1" aria-pressed="false"><span class="cookie-thumb-play" aria-hidden="true">▶</span>Gameplay 1</button>
+          <button type="button" class="cookie-media-option" data-cookie-media="2" aria-pressed="false"><span class="cookie-thumb-play" aria-hidden="true">▶</span>Gameplay 2</button>
+        </div>
+      </div>
+      <div class="cookie-detail-column">
+        <span class="cookie-type">Game Jam · Cooperative Game</span>
+        <h2 id="cookie-modal-title">Cookie <span>Panic</span></h2>
+        <div class="cookie-detail-group"><h3>Overview</h3><p>A cooperative game where two characters collect ingredients, prepare repairs, and protect a floating cookie from collapsing before time runs out.</p></div>
+        <div class="cookie-detail-group"><h3>My Contributions</h3><ul>
+           <li>Designed the core gameplay, mechanics, rules, and development workflow.</li>
+           <li>Programmed all gameplay systems in Unity using C#, including player interactions, item spawning, repairs, timers, and UI.</li>
+           <li>Integrated 3D assets and implemented the complete playable experience.</li>
+        </ul></div>
+        <div class="cookie-detail-group"><h3>Tools &amp; Technologies</h3><div class="cookie-tags"><span>Unity</span><span>C#</span><span>Game Design</span><span>Gameplay Programming</span><span>Systems Design</span><span>Asset Integration</span></div></div>
+      </div>
+    </div>
+  </div>
+</dialog>
+</body></html>
