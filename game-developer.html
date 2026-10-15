@@ -6,8 +6,10 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="game-glitch.css">
 <link rel="stylesheet" href="game-sections.css">
+<link rel="stylesheet" href="process-showcase.css">
 <script defer src="game-glitch.js"></script>
 <script defer src="game-sections.js"></script>
+<script defer src="process-showcase.js"></script>
 </head><body class="inner-page game-page">
 <canvas id="game-glitch" aria-hidden="true"></canvas>
 <main class="inner-container game-inner">
@@ -48,6 +50,38 @@
 <article class="skills-card accent-orange reveal"><header><span class="skills-card-symbol" aria-hidden="true">✦</span><div><h3>About Me</h3></div></header><p class="about-copy">I'm a Mechatronics Engineer and Game Developer focused on gameplay programming, interactive systems, and immersive experiences. I enjoy turning ideas into playable prototypes and refining them through testing, collaboration, and iteration.</p></article>
 </div>
 </section>
-<section class="game-panel future-panel" id="process" aria-labelledby="process-heading"><div class="reveal"><p class="section-overline">03 / PROCESS</p><h2 id="process-heading">From Concept to a Tested Build</h2><p>Idea &amp; Design · Prototyping · Programming · Integration · Testing &amp; Optimization</p><p class="pending-design">Design to be defined in the next phase.</p></div></section>
+<section class="game-panel process-panel" id="process" aria-labelledby="process-heading">
+  <div class="process-heading reveal">
+    <div>
+      <p class="section-overline">03 / PROCESS</p>
+      <h2 id="process-heading">FROM CONCEPT TO A<br>TESTED BUILD<span class="process-heading-dot">.</span></h2>
+    </div>
+    <p>Explore each stage to see the work behind the experience.<br><span class="process-mobile-hint">Tap a stage to switch the preview.</span></p>
+  </div>
+  <div class="process-layout reveal" id="process-showcase">
+    <div class="process-screen" aria-label="Process media preview">
+      <div class="process-screen-media">
+        <img id="process-photo" src="assets/process/idea-design-2.png" alt="Cookie Panic hand-drawn concept sketch with annotated gameplay mechanics" decoding="async">
+        <video id="process-video" playsinline muted preload="none" hidden aria-label="Video of the selected development stage"></video>
+        <div id="process-media-error" class="process-media-error" role="status" hidden>Unable to load this preview.</div>
+      </div>
+      <div class="process-screen-footer">
+        <span class="process-footer-number" id="process-active-number">01</span>
+        <div class="process-footer-info">
+          <strong id="process-active-title">Idea &amp; Design</strong>
+          <span id="process-active-caption">Cookie Panic — mechanics and cooperative gameplay sketches.</span>
+        </div>
+        <span class="process-footer-counter" id="process-active-counter" aria-hidden="true">01 / 02</span>
+      </div>
+    </div>
+    <div class="process-stage-list" role="group" aria-label="Development stages">
+      <button class="process-stage is-active" data-stage="idea" type="button" aria-pressed="true"><span class="process-stage-number">01</span><span class="process-stage-name">Idea &amp; Design</span><span class="process-arrow" aria-hidden="true">→</span></button>
+      <button class="process-stage" data-stage="prototype" type="button" aria-pressed="false"><span class="process-stage-number">02</span><span class="process-stage-name">Prototyping</span><span class="process-arrow" aria-hidden="true">→</span></button>
+      <button class="process-stage" data-stage="programming" type="button" aria-pressed="false"><span class="process-stage-number">03</span><span class="process-stage-name">Programming</span><span class="process-arrow" aria-hidden="true">→</span></button>
+      <button class="process-stage" data-stage="integration" type="button" aria-pressed="false"><span class="process-stage-number">04</span><span class="process-stage-name">Integration</span><span class="process-arrow" aria-hidden="true">→</span></button>
+      <button class="process-stage" data-stage="testing" type="button" aria-pressed="false"><span class="process-stage-number">05</span><span class="process-stage-name">Testing &amp; Optimization</span><span class="process-arrow" aria-hidden="true">→</span></button>
+    </div>
+  </div>
+</section>
 <section class="game-panel future-panel" id="games" aria-labelledby="games-heading"><div class="reveal"><p class="section-overline">04 / GAMES</p><h2 id="games-heading">Games &amp; Projects</h2><p><strong>Game Jams</strong> · Deepception · Cookie Panic · Wobble Heads · Mixer Doctor · Pitz</p><p><strong>Projects</strong> · Dunk &amp; Dash</p><p><strong>Prototypes</strong> · Unity exercises</p><p class="pending-design">Project galleries will be designed separately.</p></div></section>
 </main></body></html>
