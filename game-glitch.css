@@ -36,3 +36,26 @@ body.xr-page > .inner-container {
     }
 }
 
+body.game-page,
+body.xr-page {
+    isolation: isolate;
+}
+
+body.game-page #game-glitch,
+body.xr-page #game-glitch {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.game-page > .inner-container,
+body.xr-page > .inner-container {
+    position: relative;
+    z-index: 1;
+}
+
+body.game-page .inner-container,
+body.xr-page .inner-container {
+    mix-blend-mode: normal;
+}
