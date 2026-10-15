@@ -30,7 +30,7 @@
       number:'03', title:'Programming',
       caption:'Code and behavior — still image followed by GIF.',type:'code',
       image:asset('programming-1.png'), gif:asset('programming-2.gif'),
-      imageDelay:2000, gifDelay:2400
+      imageDelay:2000, gifDelay:6500
     },
     integration: {
       number:'04', title:'Integration',
