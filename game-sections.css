@@ -45,3 +45,33 @@
 @media(max-width:900px){.game-page .skills-grid{grid-template-columns:1fr;}.game-page .game-panel{min-height:unset;padding-block:70px 95px;}.game-page .game-intro{min-height:90svh;}.game-page .skills-card{padding:20px;}}
 @media(max-width:520px){.game-page .game-topnav{justify-content:center;padding:12px 4px;}.game-page .game-topnav-links{width:100%;justify-content:space-around;}.game-page .game-topnav a{font-size:12px;}.game-page .cv-placeholder{align-items:flex-start;}.game-page .cv-coming{margin-left:0;}.game-page .skill-chip{font-size:12px;padding:8px 10px;min-height:42px;}.game-page .skill-chip img{width:24px;height:24px;flex-basis:24px;}}
 @media(prefers-reduced-motion:reduce){.game-page.has-reveal .reveal{opacity:1;transform:none;transition:none;}}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.game-page.inner-page {
+    overflow-x: clip;
+    overflow-y: visible;
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+.game-page .game-panel {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+}
+
+.game-page .inner-container,
+.game-page .game-panel,
+.game-page .skills-grid,
+.game-page .skills-card {
+    touch-action: pan-y;
+}
+
+.game-page {
+    scroll-snap-type: none;
+}
+
