@@ -12,6 +12,7 @@
 <script defer src="process-showcase.js"></script>
 <link rel="stylesheet" href="games-modal.css">
 <script defer src="games-modal.js"></script>
+
 </head><body class="inner-page game-page">
 <canvas id="game-glitch" aria-hidden="true"></canvas>
 <main class="inner-container game-inner">
@@ -89,7 +90,7 @@
  <div class="section-heading reveal"><p class="section-overline">04 / PORTFOLIO</p><h2 id="games-heading">Games &amp; <span>Projects</span></h2><p>Game jams, featured projects, and playable experiments.</p></div>
  <div class="games-category reveal"><div class="games-category-heading"><h3>Game Jams</h3><span>5 games</span></div>
  <div class="games-card-grid">
- <article class="games-card games-card--placeholder"><div class="games-card-placeholder" aria-hidden="true">DEEPCEPTION</div><h4>Deepception</h4><small>Game Jam · Details coming soon</small></article>
+ <button type="button" class="games-card games-card--active" data-open-deepception aria-haspopup="dialog" aria-controls="deepception-modal"><img src="assets/games/deepception-cover.png" alt="Deepception: neon-lit purple corridor and title" loading="lazy"><span class="games-card-copy"><strong>Deepception</strong><small>Game Jam · View project ↗</small></span></button>
  <button type="button" class="games-card games-card--active" data-open-cookie aria-haspopup="dialog" aria-controls="cookie-modal"><img src="assets/games/cookie-panic-cover.png" alt="Cookie Panic official cover with the collector and oven on a floating cookie" loading="lazy"><span class="games-card-copy"><strong>Cookie Panic</strong><small>Game Jam · View project ↗</small></span></button>
  <article class="games-card games-card--placeholder"><div class="games-card-placeholder" aria-hidden="true">WOBBLE HEADS</div><h4>Wobble Heads</h4><small>Game Jam · Details coming soon</small></article>
  <article class="games-card games-card--placeholder"><div class="games-card-placeholder" aria-hidden="true">MIXER DOCTOR</div><h4>Mixer Doctor</h4><small>Game Jam · Details coming soon</small></article>
@@ -99,16 +100,16 @@
  <div class="games-category reveal"><div class="games-category-heading"><h3>Prototypes</h3><span>Unity exercises</span></div><div class="games-soon-card"><strong>Unity Exercises &amp; Prototypes</strong><span>Gameplay systems and experiments · Coming next</span></div></div>
 </section>
 </main>
-<dialog id="cookie-modal" class="cookie-modal" aria-labelledby="cookie-modal-title">
+<dialog id="cookie-modal" class="cookie-modal" data-game-modal="cookie-panic" aria-labelledby="cookie-modal-title">
   <div class="cookie-modal-body">
-    <button type="button" class="cookie-close" data-cookie-close aria-label="Close Cookie Panic details">×</button>
+    <button type="button" class="cookie-close" data-game-close aria-label="Close Cookie Panic details">×</button>
     <div class="cookie-modal-grid">
       <div class="cookie-media-column">
         <div class="cookie-media-stage"><img id="cookie-cover" src="assets/games/cookie-panic-cover.png" alt="Cookie Panic official game cover"><video id="cookie-player" controls playsinline preload="none" hidden></video></div>
         <div class="cookie-media-picker" aria-label="Cookie Panic media">
-          <button type="button" class="cookie-media-option is-selected" data-cookie-media="cover" aria-pressed="true" aria-label="Show Cookie Panic cover"><span class="cookie-thumb-image"><img src="assets/games/cookie-panic-cover.png" alt="" loading="lazy"><span class="cookie-thumb-pill">IMAGE</span></span><span class="cookie-thumb-label">Cover <span aria-hidden="true">↗</span></span></button>
-          <button type="button" class="cookie-media-option" data-cookie-media="1" aria-pressed="false" aria-label="Play Cookie Panic gameplay video 1"><span class="cookie-thumb-image"><img src="assets/games/cookie-panic-gameplay-1-thumb.jpg" alt="" loading="lazy"><span class="cookie-thumb-play" aria-hidden="true">▶</span><span class="cookie-thumb-pill">VIDEO 01</span></span><span class="cookie-thumb-label">Gameplay 1 <span aria-hidden="true">↗</span></span></button>
-          <button type="button" class="cookie-media-option" data-cookie-media="2" aria-pressed="false" aria-label="Play Cookie Panic gameplay video 2"><span class="cookie-thumb-image"><img src="assets/games/cookie-panic-gameplay-2-thumb.jpg" alt="" loading="lazy"><span class="cookie-thumb-play" aria-hidden="true">▶</span><span class="cookie-thumb-pill">VIDEO 02</span></span><span class="cookie-thumb-label">Gameplay 2 <span aria-hidden="true">↗</span></span></button>
+          <button type="button" class="cookie-media-option is-selected" data-game-media="cover" aria-pressed="true" aria-label="Show Cookie Panic cover"><span class="cookie-thumb-image"><img src="assets/games/cookie-panic-cover.png" alt="" loading="lazy"><span class="cookie-thumb-pill">IMAGE</span></span><span class="cookie-thumb-label">Cover <span aria-hidden="true">↗</span></span></button>
+          <button type="button" class="cookie-media-option" data-game-media="1" data-video-src="assets/games/cookie-panic-gameplay-1.mp4" aria-pressed="false" aria-label="Play Cookie Panic gameplay video 1"><span class="cookie-thumb-image"><img src="assets/games/cookie-panic-gameplay-1-thumb.jpg" alt="" loading="lazy"><span class="cookie-thumb-play" aria-hidden="true">▶</span><span class="cookie-thumb-pill">VIDEO 01</span></span><span class="cookie-thumb-label">Gameplay 1 <span aria-hidden="true">↗</span></span></button>
+          <button type="button" class="cookie-media-option" data-game-media="2" data-video-src="assets/games/cookie-panic-gameplay-2.mp4" aria-pressed="false" aria-label="Play Cookie Panic gameplay video 2"><span class="cookie-thumb-image"><img src="assets/games/cookie-panic-gameplay-2-thumb.jpg" alt="" loading="lazy"><span class="cookie-thumb-play" aria-hidden="true">▶</span><span class="cookie-thumb-pill">VIDEO 02</span></span><span class="cookie-thumb-label">Gameplay 2 <span aria-hidden="true">↗</span></span></button>
         </div>
       </div>
       <div class="cookie-detail-column">
@@ -124,7 +125,34 @@
         <a class="cookie-play-link" href="https://eduardo-riba.itch.io/cookie-panic" target="_blank" rel="noopener noreferrer" aria-label="Play Cookie Panic on itch.io (opens a new tab)"><span aria-hidden="true">▶</span> Play on itch.io <span aria-hidden="true">↗</span></a>
       </div>
     </div>
+  </div>
+</dialog>
 
+<dialog id="deepception-modal" class="cookie-modal" data-game-modal="deepception" aria-labelledby="deepception-modal-title">
+  <div class="cookie-modal-body">
+    <button type="button" class="cookie-close" data-game-close aria-label="Close Deepception details">×</button>
+    <div class="cookie-modal-grid">
+      <div class="cookie-media-column">
+        <div class="cookie-media-stage"><img id="deepception-cover" src="assets/games/deepception-cover.png" alt="Deepception official cover"><video id="deepception-player" controls playsinline preload="none" hidden></video></div>
+        <div class="cookie-media-picker" aria-label="Deepception media">
+          <button type="button" class="cookie-media-option is-selected" data-game-media="cover" aria-pressed="true" aria-label="Show Deepception cover"><span class="cookie-thumb-image"><img src="assets/games/deepception-cover.png" alt="" loading="lazy"><span class="cookie-thumb-pill">IMAGE</span></span><span class="cookie-thumb-label">Cover <span aria-hidden="true">↗</span></span></button>
+          <button type="button" class="cookie-media-option" data-game-media="1" data-video-src="assets/games/deepception-gameplay-1.mp4" aria-pressed="false" aria-label="Play Deepception gameplay 1"><span class="cookie-thumb-image"><img src="assets/games/deepception-gameplay-1-thumb.jpg" alt="" loading="lazy"><span class="cookie-thumb-play" aria-hidden="true">▶</span><span class="cookie-thumb-pill">VIDEO 01</span></span><span class="cookie-thumb-label">Gameplay 1 <span aria-hidden="true">↗</span></span></button>
+          <button type="button" class="cookie-media-option" data-game-media="2" data-video-src="assets/games/deepception-gameplay-2.mp4" aria-pressed="false" aria-label="Play Deepception gameplay 2"><span class="cookie-thumb-image"><img src="assets/games/deepception-gameplay-2-thumb.jpg" alt="" loading="lazy"><span class="cookie-thumb-play" aria-hidden="true">▶</span><span class="cookie-thumb-pill">VIDEO 02</span></span><span class="cookie-thumb-label">Gameplay 2 <span aria-hidden="true">↗</span></span></button>
+        </div>
+      </div>
+      <div class="cookie-detail-column">
+        <span class="cookie-type">Game Jam · 3D Exploration Game</span>
+        <h2 id="deepception-modal-title">Deep<span>ception</span></h2>
+        <div class="cookie-detail-group"><h3>Overview</h3><p>A 3D exploration game where players search for hidden objects across time-limited levels, combining responsive movement, environmental interactions, and visual effects.</p></div>
+        <div class="cookie-detail-group"><h3>My Contributions</h3><ul>
+          <li>Integrated 3D models and environments into Unity.</li>
+          <li>Programmed character movement, camera rotation, level timers, and elevator interactions using C# coroutines.</li>
+          <li>Implemented audio triggers, post-processing, object highlight shaders, and in-game video playback for the web build.</li>
+        </ul></div>
+        <div class="cookie-detail-group"><h3>Tools &amp; Technologies</h3><div class="cookie-tags"><span>Unity</span><span>C#</span><span>Gameplay Programming</span><span>Camera Systems</span><span>Coroutines</span><span>Shaders</span><span>Post-Processing</span></div></div>
+        <a class="cookie-play-link" href="https://ferxha.itch.io/deepception" target="_blank" rel="noopener noreferrer" aria-label="Play Deepception on itch.io (opens a new tab)"><span aria-hidden="true">▶</span> Play on itch.io <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
   </div>
 </dialog>
 </body></html>
