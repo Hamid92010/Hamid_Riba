@@ -45,3 +45,21 @@
 @media(max-width:900px){.game-page .games-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.cookie-modal-grid{grid-template-columns:1fr;}}
 @media(max-width:540px){.game-page .games-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.game-page .games-card>img,.game-page .games-card-placeholder{height:112px;}.cookie-modal{width:calc(100% - 14px);max-height:calc(100dvh - 14px);border-radius:15px;}.cookie-modal-body{padding:15px;}.cookie-detail-column h2{font-size:36px;}.cookie-media-picker{gap:7px;}}
 @media(prefers-reduced-motion:reduce){.game-page button.games-card{transition:none;}}
+
+/* v2: cinematic thumbnail selector with images from actual game footage. */
+.cookie-modal .cookie-media-picker{gap:12px;margin-top:14px;}
+.cookie-modal .cookie-media-option{position:relative;padding:5px;min-height:0;display:flex;flex-direction:column;gap:0;overflow:hidden;border-radius:14px;border:1px solid rgba(128,164,218,.4);background:linear-gradient(150deg,#18243d,#0c152c);box-shadow:0 6px 22px rgba(0,0,0,.2);transition:transform .2s,border-color .2s,box-shadow .2s;}
+.cookie-modal .cookie-media-option:hover{transform:translateY(-3px);border-color:#76eaff;box-shadow:0 8px 26px rgba(24,222,245,.13);}
+.cookie-modal .cookie-media-option.is-selected{border-color:#e978e8;box-shadow:0 0 0 1px rgba(232,102,228,.8),0 0 23px rgba(232,102,228,.18);}
+.cookie-modal .cookie-thumb-image{position:relative;display:block;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:9px;background:#10182c;}
+.cookie-modal .cookie-thumb-image img{display:block;width:100%;height:100%;object-fit:cover;filter:brightness(.82);transition:transform .25s,filter .25s;border-radius:0;}
+.cookie-modal .cookie-media-option:hover .cookie-thumb-image img,.cookie-modal .cookie-media-option.is-selected .cookie-thumb-image img{filter:brightness(1);transform:scale(1.045);}
+.cookie-modal .cookie-thumb-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:rgba(6,12,32,.78);border:1px solid rgba(255,255,255,.75);display:grid;place-items:center;color:white;font-size:14px;padding-left:2px;box-shadow:0 2px 12px rgba(0,0,0,.65);}
+.cookie-modal .cookie-thumb-pill{position:absolute;top:7px;left:7px;font-size:9px;letter-spacing:.09em;font-weight:800;color:#eafaff;background:rgba(3,11,29,.78);border:1px solid rgba(160,218,246,.35);border-radius:5px;padding:3px 5px;}
+.cookie-modal .cookie-thumb-label{width:100%;padding:9px 8px 7px;display:flex;align-items:center;justify-content:space-between;text-align:left;font-size:clamp(10px,1vw,13px);font-weight:700;color:#edf6ff;}
+.cookie-modal .cookie-thumb-label>span{color:#75ecff;font-size:15px;}
+.cookie-modal .cookie-play-link{display:flex;align-items:center;justify-content:center;gap:12px;min-height:50px;width:fit-content;max-width:100%;margin-top:16px;padding:12px 26px;border-radius:999px;border:1px solid #86f5ff;color:#faffff;text-decoration:none;font-size:15px;font-weight:750;letter-spacing:.01em;background:linear-gradient(105deg,rgba(1,156,194,.45),rgba(85,39,165,.68),rgba(198,44,182,.65));box-shadow:0 0 18px rgba(0,226,254,.23),0 0 16px rgba(230,73,211,.13);transition:transform .2s,box-shadow .2s;}
+.cookie-modal .cookie-play-link:hover{transform:translateY(-2px);box-shadow:0 0 23px rgba(0,226,254,.48),0 0 24px rgba(230,73,211,.26);}
+.cookie-modal .cookie-play-link:focus-visible,.cookie-modal .cookie-media-option:focus-visible{outline:3px solid #fff;outline-offset:3px;}
+@media(max-width:540px){.cookie-modal .cookie-media-picker{gap:6px}.cookie-modal .cookie-media-option{padding:3px;border-radius:10px}.cookie-modal .cookie-thumb-label{padding:7px 3px 5px;font-size:10px}.cookie-modal .cookie-thumb-pill{top:3px;left:3px;font-size:7px;padding:2px 3px}.cookie-modal .cookie-thumb-play{width:27px;height:27px;font-size:11px}.cookie-modal .cookie-play-link{width:100%;}}
+@media(prefers-reduced-motion:reduce){.cookie-modal .cookie-media-option,.cookie-modal .cookie-thumb-image img,.cookie-modal .cookie-play-link{transition:none;}}
