@@ -1,0 +1,8 @@
+/* CV download cards — scoped to Game Developer and XR Developer only. */
+.game-page a.cv-download{color:inherit;text-decoration:none;cursor:pointer;transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease;}
+.game-page a.cv-download:hover{border-color:#65e8fb;box-shadow:0 0 24px rgba(42,214,250,.17);transform:translateY(-2px);}
+.game-page a.cv-download:focus-visible{outline:3px solid #83e7ff;outline-offset:4px;}
+.game-page .cv-download-copy{display:block;min-width:0;flex:1;}
+.game-page a.cv-download .cv-coming{color:#e4faff;border-color:#46a7c9;background:rgba(44,176,210,.12);}
+@media(max-width:520px){.game-page a.cv-download{flex-wrap:wrap}.game-page a.cv-download .cv-coming{margin-left:auto;}}
+@media(prefers-reduced-motion:reduce){.game-page a.cv-download{transition:none;}}
