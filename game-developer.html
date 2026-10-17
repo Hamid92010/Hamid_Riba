@@ -92,7 +92,7 @@
  <div class="games-card-grid">
  <button type="button" class="games-card games-card--active" data-open-deepception aria-haspopup="dialog" aria-controls="deepception-modal"><img src="assets/games/deepception-cover.png" alt="Deepception: neon-lit purple corridor and title" loading="lazy"><span class="games-card-copy"><strong>Deepception</strong><small>Game Jam · View project ↗</small></span></button>
  <button type="button" class="games-card games-card--active" data-open-cookie aria-haspopup="dialog" aria-controls="cookie-modal"><img src="assets/games/cookie-panic-cover.png" alt="Cookie Panic official cover with the collector and oven on a floating cookie" loading="lazy"><span class="games-card-copy"><strong>Cookie Panic</strong><small>Game Jam · View project ↗</small></span></button>
- <article class="games-card games-card--placeholder"><div class="games-card-placeholder" aria-hidden="true">WOBBLE HEADS</div><h4>Wobble Heads</h4><small>Game Jam · Details coming soon</small></article>
+ <button type="button" class="games-card games-card--active" aria-haspopup="dialog" aria-controls="wobble-modal"><img src="assets/games/wobble-heads-cover.png" alt="Wobble Heads game cover: stylized city intersection at night" loading="lazy"><span class="games-card-copy"><strong>Wobble Heads</strong><small>Game Jam · View project ↗</small></span></button>
  <article class="games-card games-card--placeholder"><div class="games-card-placeholder" aria-hidden="true">MIXER DOCTOR</div><h4>Mixer Doctor</h4><small>Game Jam · Details coming soon</small></article>
  <article class="games-card games-card--placeholder"><div class="games-card-placeholder" aria-hidden="true">PITZ</div><h4>Pitz</h4><small>Game Jam · Details coming soon</small></article>
  </div></div>
@@ -151,6 +151,34 @@
         </ul></div>
         <div class="cookie-detail-group"><h3>Tools &amp; Technologies</h3><div class="cookie-tags"><span>Unity</span><span>C#</span><span>Gameplay Programming</span><span>Camera Systems</span><span>Coroutines</span><span>Shaders</span><span>Post-Processing</span></div></div>
         <a class="cookie-play-link" href="https://ferxha.itch.io/deepception" target="_blank" rel="noopener noreferrer" aria-label="Play Deepception on itch.io (opens a new tab)"><span aria-hidden="true">▶</span> Play on itch.io <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="wobble-modal" class="cookie-modal" data-game-modal="wobble-heads" aria-labelledby="wobble-modal-title">
+  <div class="cookie-modal-body">
+    <button type="button" class="cookie-close" data-game-close aria-label="Close Wobble Heads details">×</button>
+    <div class="cookie-modal-grid">
+      <div class="cookie-media-column">
+        <div class="cookie-media-stage"><img id="wobble-cover" src="assets/games/wobble-heads-cover.png" alt="Wobble Heads official game cover"><video id="wobble-player" controls playsinline preload="none" hidden></video></div>
+        <div class="cookie-media-picker" aria-label="Wobble Heads media">
+          <button type="button" class="cookie-media-option is-selected" data-game-media="cover" aria-pressed="true" aria-label="Show Wobble Heads cover"><span class="cookie-thumb-image"><img src="assets/games/wobble-heads-cover.png" alt="" loading="lazy"><span class="cookie-thumb-pill">IMAGE</span></span><span class="cookie-thumb-label">Cover <span aria-hidden="true">↗</span></span></button>
+          <button type="button" class="cookie-media-option" data-game-media="1" data-video-src="assets/games/wobble-heads-gameplay-1.mp4" aria-pressed="false" aria-label="Play Wobble Heads gameplay 1"><span class="cookie-thumb-image"><img src="assets/games/wobble-heads-gameplay-1-thumb.jpg" alt="" loading="lazy"><span class="cookie-thumb-play" aria-hidden="true">▶</span><span class="cookie-thumb-pill">VIDEO 01</span></span><span class="cookie-thumb-label">Gameplay 1 <span aria-hidden="true">↗</span></span></button>
+          <button type="button" class="cookie-media-option" data-game-media="2" data-video-src="assets/games/wobble-heads-gameplay-2.mp4" aria-pressed="false" aria-label="Play Wobble Heads gameplay 2"><span class="cookie-thumb-image"><img src="assets/games/wobble-heads-gameplay-2-thumb.jpg" alt="" loading="lazy"><span class="cookie-thumb-play" aria-hidden="true">▶</span><span class="cookie-thumb-pill">VIDEO 02</span></span><span class="cookie-thumb-label">Gameplay 2 <span aria-hidden="true">↗</span></span></button>
+        </div>
+      </div>
+      <div class="cookie-detail-column">
+        <span class="cookie-type">Game Jam · Stylized 3D Game</span>
+        <h2 id="wobble-modal-title">Wobble <span>Heads</span></h2>
+        <div class="cookie-detail-group"><h3>Overview</h3><p>A playful 3D game featuring exaggerated character movement and dynamically growing heads.</p></div>
+        <div class="cookie-detail-group"><h3>My Contributions</h3><ul>
+          <li>Planned the main menu layout and programmed its UI functionality in Unity.</li>
+          <li>Developed character motion that supports dynamic head scaling while keeping the head attached to the body.</li>
+          <li>Implemented exaggerated cartoon-style head and body movement.</li>
+        </ul></div>
+        <div class="cookie-detail-group"><h3>Tools &amp; Technologies</h3><div class="cookie-tags"><span>Unity</span><span>C#</span><span>UI Programming</span><span>Character Animation</span><span>Gameplay Programming</span><span>Transform Systems</span></div></div>
+        <a class="cookie-play-link" href="https://eduardo-riba.itch.io/wobble-heads" target="_blank" rel="noopener noreferrer" aria-label="View Wobble Heads on itch.io (opens a new tab)"><span aria-hidden="true">▶</span> View on itch.io <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </div>
