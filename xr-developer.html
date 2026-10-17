@@ -1,29 +1,82 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#06112d">
-  <title>XR Developer | Hamid Riba</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="game-glitch.css">
-  <script defer src="game-glitch.js"></script>
-</head>
-<body class="inner-page xr-page">
-  <canvas id="game-glitch" aria-hidden="true"></canvas>
-  <main class="inner-container">
-    <nav class="inner-nav" aria-label="Navigation"><a class="back-link" href="index.html">← Back to home</a><span class="mini-brand">HAMID RIBA</span></nav>
-    <header class="section-hero">
-      <span class="eyebrow">Virtual reality · Augmented reality · Immersive applications</span>
-      <h1>XR <span class="name-last">Developer</span></h1>
-      <p>Experiences designed for immersive interaction: VR learning environments, social multi-user spaces and browser-based AR. We'll complete this page with project demonstrations and technical notes.</p>
-    </header>
-    <section class="project-grid" aria-label="XR project categories">
-      <article class="project-card xr-card"><h2>Educational VR</h2><p>Interactive learning experiences built with Unity, including immersive gameplay and spatial UI.</p></article>
-      <article class="project-card xr-card"><h2>Social VR</h2><p>A multi-user VRChat laboratory with Udon/UdonSharp scripting for interactive experiences.</p></article>
-      <article class="project-card xr-card"><h2>WebAR</h2><p>Browser-based augmented reality prototyping with 8th Wall, including shared AR interactions.</p></article>
-    </section>
-    <p class="inner-note">This is the initial page structure. Interactive demos, screenshots and video case studies can be added next.</p>
-  </main>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#040917" name="theme-color"/><meta content="XR Developer portfolio — immersive experiences, VR, AR, WebXR and Unity projects." name="description"/>
+<title>XR Developer | Hamid Riba</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="game-glitch.css" rel="stylesheet"/>
+<link href="game-sections.css" rel="stylesheet"/>
+<link href="process-showcase.css" rel="stylesheet"/>
+<script defer="" src="game-glitch.js"></script>
+<script defer="" src="game-sections.js"></script>
+
+<link href="games-modal.css" rel="stylesheet"/>
+<script defer="" src="games-modal.js"></script>
+<link href="xr-developer.css" rel="stylesheet"/><script defer="True" src="xr-developer.js"></script></head><body class="inner-page game-page xr-page">
+<canvas aria-hidden="true" id="game-glitch"></canvas>
+<main class="inner-container game-inner">
+<nav aria-label="Page navigation" class="game-topnav">
+<a class="game-back" href="index.html">← Back to Home</a>
+<div class="game-topnav-links"><a href="#intro">Home</a><a href="#description">About</a><a href="#tour">Virtual Tour</a><a href="#process">Process</a><a href="#games">Projects</a></div>
+</nav>
+<section aria-labelledby="intro-heading" class="game-panel game-intro" id="intro">
+<div class="reveal"><p class="section-overline">01 / INTRODUCTION</p><h1 id="intro-heading">XR <span class="name-first">Developer</span></h1>
+<p>Building immersive interactions across virtual, augmented, and mixed reality.</p>
+<div aria-label="Resume coming soon" class="cv-placeholder"><span aria-hidden="true" class="cv-icon">▤</span><div><strong>My Resume</strong><small>CV download will be added when the portfolio is complete.</small></div><span class="cv-coming">Coming soon</span></div>
+</div><a class="continue-link" href="#description">Explore my skills <span aria-hidden="true">↓</span></a>
+</section>
+<section aria-labelledby="skills-heading" class="game-panel game-description" id="description">
+<div class="section-heading reveal"><p class="section-overline">02 / DESCRIPTION</p><h2 id="skills-heading">Skills &amp; <span>About Me</span></h2><p>Platforms, development tools, and technologies for immersive experiences.</p></div>
+<div class="skills-grid">
+<article class="skills-card accent-cyan reveal"><header><span aria-hidden="true" class="skills-card-symbol">&lt;/&gt;</span><div><h3>Languages</h3><p>Programming languages used in interactive XR systems.</p></div></header><div class="skills-chips"><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"/><span>C#</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"/><span>C++</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/><span>JavaScript</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"/><span>HTML</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"/><span>CSS</span></div></div></article>
+<article class="skills-card accent-blue reveal"><header><span aria-hidden="true" class="skills-card-symbol">⚙</span><div><h3>Platforms &amp; Engines</h3><p>XR ecosystems and real-time development engines.</p></div></header><div class="skills-chips"><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/meta/1689FF"/><span>Meta</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg"/><span>Unity</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg"/><span>Unreal Engine</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/8thwall/ffffff"/><span>8th Wall</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="assets/skill-icons/spatial.svg"/><span>Spatial</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/vrchat/ffffff"/><span>VRChat</span></div></div></article>
+<article class="skills-card accent-purple reveal"><header><span aria-hidden="true" class="skills-card-symbol">⬡</span><div><h3>Frameworks &amp; Technologies</h3><p>AR tracking, WebXR, rendering, and XR interaction.</p></div></header><div class="skills-chips"><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/google/4285F4"/><span>ARCore</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/apple/ffffff"/><span>ARKit</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/webxr/ffffff"/><span>WebXR</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg"/><span>XR Interaction Toolkit</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threejs/threejs-original.svg"/><span>Three.js</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/vuforia/00AEEE"/><span>Vuforia</span></div><div class="skill-chip"><img alt="" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/khronosgroup/ffffff"/><span>OpenXR</span></div></div></article>
+<article class="skills-card accent-orange reveal"><header><span aria-hidden="true" class="skills-card-symbol">✦</span><div><h3>About Me</h3></div></header><p class="about-copy">I'm a Mechatronics Engineer and XR Developer focused on immersive interaction, real-time development, and intuitive spatial experiences. My work spans educational VR, collaborative virtual environments, and browser-based AR, combining programming with interactive design and iterative testing.</p></article>
+</div>
+</section>
+<section aria-labelledby="tour-heading" class="game-panel xr-tour-panel" id="tour"><div class="section-heading reveal"><p class="section-overline">03 / VIRTUAL TOUR</p><h2 id="tour-heading">Explore My <span>Virtual World</span></h2><p>Step inside an interactive space and explore my work in an immersive setting.</p></div><div class="xr-tour-card reveal"><div aria-hidden="true" class="xr-tour-orbit"><span>XR</span><i></i><i></i><i></i></div><div class="xr-tour-copy"><span class="cookie-type">FrameVR · Interactive Experience</span><h3>Experience the portfolio from the inside.</h3><p>Visit my virtual room and explore an environment built around presence, navigation, and spatial interaction.</p><a class="cookie-play-link xr-tour-link" href="https://framevr.io/hamidroom" rel="noopener noreferrer" target="_blank">Enter Virtual Tour <span aria-hidden="true">↗</span></a></div></div></section><section aria-labelledby="process-heading" class="game-panel process-panel" id="process">
+<div class="process-heading reveal">
+<div>
+<p class="section-overline">04 / PROCESS</p>
+<h2 id="process-heading">From Concept to a<br/>Tested Build<span class="process-heading-dot">.</span></h2>
+</div>
+<p>From concepts to immersive experiences. Explore the actual development footage.</p>
+</div>
+<div class="process-layout reveal" id="process-showcase">
+<div aria-label="Process media preview" class="process-screen">
+<div class="process-screen-media">
+<img alt="Design sketch for a VR educational game: grid of interactive questions and a Minotaur" decoding="async" id="process-photo" src="assets/xr-process/idea-design-1.png"/>
+<video aria-label="Video of the selected development stage" hidden="" id="process-video" muted="" playsinline="" preload="none"></video>
+<div class="process-media-error" hidden="" id="process-media-error" role="status">Unable to load this preview.</div>
+</div>
+<div class="process-screen-footer">
+<span class="process-footer-number" id="process-active-number">01</span>
+<div class="process-footer-info">
+<strong id="process-active-title">Idea &amp; Design</strong>
+<span id="process-active-caption">Initial concept sketches for an educational VR experience.</span>
+</div>
+<span aria-hidden="true" class="process-footer-counter" id="process-active-counter">01 / 02</span>
+</div>
+</div>
+<div aria-label="Development stages" class="process-stage-list" role="group">
+<button aria-pressed="true" class="process-stage is-active" data-stage="idea" type="button"><span class="process-stage-number">01</span><span class="process-stage-name">Idea &amp; Design</span><span aria-hidden="true" class="process-arrow">→</span></button>
+<button aria-pressed="false" class="process-stage" data-stage="prototype" type="button"><span class="process-stage-number">02</span><span class="process-stage-name">Prototyping</span><span aria-hidden="true" class="process-arrow">→</span></button>
+<button aria-pressed="false" class="process-stage" data-stage="programming" type="button"><span class="process-stage-number">03</span><span class="process-stage-name">Programming</span><span aria-hidden="true" class="process-arrow">→</span></button>
+<button aria-pressed="false" class="process-stage" data-stage="integration" type="button"><span class="process-stage-number">04</span><span class="process-stage-name">Integration</span><span aria-hidden="true" class="process-arrow">→</span></button>
+<button aria-pressed="false" class="process-stage" data-stage="testing" type="button"><span class="process-stage-number">05</span><span class="process-stage-name">Testing &amp; Optimization</span><span aria-hidden="true" class="process-arrow">→</span></button>
+</div>
+</div>
+</section>
+<section aria-labelledby="games-heading" class="game-panel games-panel" id="games"><div class="section-heading reveal"><p class="section-overline">05 / PORTFOLIO</p><h2 id="games-heading">XR <span>Projects</span></h2><p>Immersive experiences, creative challenges, and technical prototypes.</p></div>
+<div class="games-category reveal"><div class="games-category-heading"><h3>Projects</h3><span>Featured immersive work</span></div><div class="games-card-grid xr-project-grid"><button aria-controls="inflation-modal" aria-haspopup="dialog" class="games-card games-card--active" type="button"><img alt="Inflation Paradox — educational virtual reality project" loading="lazy" src="https://raw.githubusercontent.com/Hamid92010/HamidRiba/main/assets/images/inflation-paradox-cover.png"/><span class="games-card-copy"><strong>Inflation Paradox</strong><small>Educational VR · View project ↗</small></span></button></div></div>
+<div class="games-category reveal"><div class="games-category-heading"><h3>Game Jams</h3><span>XR community</span></div><div class="xr-jam-card"><img alt="VR Fest MX — Santuarios del Futuro, Meta" loading="lazy" src="assets/xr-vrfest.png"/><div><span class="cookie-type">XR · VR Community</span><h4>VR Fest MX — Santuarios del Futuro</h4><p>An opportunity to connect with the immersive-technology community and share experiences around virtual reality.</p><a class="cookie-play-link" href="https://lnkd.in/p/eVzfh9qN" rel="noopener noreferrer" target="_blank">View LinkedIn post <span aria-hidden="true">↗</span></a></div></div></div>
+<div class="games-category reveal"><div class="games-category-heading"><h3>Prototypes</h3><span>Experiments &amp; technical practice</span></div><div class="games-soon-card"><strong>XR Exercises &amp; Prototypes</strong><span>Interaction systems, spatial interfaces, and immersive experiments · Coming next</span></div></div></section>
+</main>
+
+
+
+
+
+
+<dialog aria-labelledby="inflation-modal-title" class="cookie-modal" data-game-modal="inflation-paradox" id="inflation-modal"><div class="cookie-modal-body"><button aria-label="Close Inflation Paradox details" class="cookie-close" data-game-close="" type="button">×</button><div class="cookie-modal-grid"><div class="cookie-media-column"><div class="cookie-media-stage"><img alt="Inflation Paradox official game cover" src="https://raw.githubusercontent.com/Hamid92010/HamidRiba/main/assets/images/inflation-paradox-cover.png"/><video controls="" hidden="" playsinline="" preload="none"></video></div><div aria-label="Inflation Paradox gallery" class="cookie-media-picker"><button aria-pressed="true" class="cookie-media-option is-selected" data-game-media="cover" type="button"><span class="cookie-thumb-image"><img alt="" loading="lazy" src="https://raw.githubusercontent.com/Hamid92010/HamidRiba/main/assets/images/inflation-paradox-cover.png"/><span class="cookie-thumb-pill">IMAGE</span></span><span class="cookie-thumb-label">Cover <span aria-hidden="true">↗</span></span></button><button aria-pressed="false" class="cookie-media-option" data-game-media="1" data-video-src="https://raw.githubusercontent.com/Hamid92010/HamidRiba/main/assets/video/inflation-paradox-gameplay-1.mp4" type="button"><span class="cookie-thumb-image"><img alt="" loading="lazy" src="https://raw.githubusercontent.com/Hamid92010/HamidRiba/main/assets/images/inflation-paradox-cover.png"/><span aria-hidden="true" class="cookie-thumb-play">▶</span><span class="cookie-thumb-pill">VIDEO 01</span></span><span class="cookie-thumb-label">Gameplay 1 <span aria-hidden="true">↗</span></span></button><button aria-pressed="false" class="cookie-media-option" data-game-media="2" data-video-src="https://raw.githubusercontent.com/Hamid92010/HamidRiba/main/assets/video/inflation-paradox-gameplay-2.mp4" type="button"><span class="cookie-thumb-image"><img alt="" loading="lazy" src="https://raw.githubusercontent.com/Hamid92010/HamidRiba/main/assets/images/inflation-paradox-cover.png"/><span aria-hidden="true" class="cookie-thumb-play">▶</span><span class="cookie-thumb-pill">VIDEO 02</span></span><span class="cookie-thumb-label">Gameplay 2 <span aria-hidden="true">↗</span></span></button><button aria-pressed="false" class="cookie-media-option" data-game-media="3" data-video-src="https://raw.githubusercontent.com/Hamid92010/HamidRiba/main/assets/video/inflation-paradox-gameplay-3.mp4" type="button"><span class="cookie-thumb-image"><img alt="" loading="lazy" src="https://raw.githubusercontent.com/Hamid92010/HamidRiba/main/assets/images/inflation-paradox-cover.png"/><span aria-hidden="true" class="cookie-thumb-play">▶</span><span class="cookie-thumb-pill">VIDEO 03</span></span><span class="cookie-thumb-label">Gameplay 3 <span aria-hidden="true">↗</span></span></button></div></div><div class="cookie-detail-column"><span class="cookie-type">Project · Educational VR</span><h2 id="inflation-modal-title">Inflation <span>Paradox</span></h2><div class="cookie-detail-group"><h3>Overview</h3><p>An immersive VR educational experience that transforms financial concepts like inflation into interactive challenges, quizzes, and physical gameplay.</p></div><div class="cookie-detail-group"><h3>My Contributions</h3><ul><li>Developed VR gameplay mechanics, question systems, timers, player feedback, and interactive behaviors in Unity using C#.</li><li>Implemented reusable interactive systems and integrated interface elements, sound, animations, and visual effects.</li><li>Helped translate financial-education concepts into clear and engaging interactions designed for VR.</li></ul></div><div class="cookie-detail-group"><h3>Tools &amp; Technologies</h3><div class="cookie-tags"><span>Unity</span><span>C#</span><span>Meta Quest</span><span>VR Interaction</span><span>Gameplay Programming</span><span>Spatial UI</span></div></div></div></div></div></dialog></body></html>
